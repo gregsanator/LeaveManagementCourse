@@ -4,6 +4,7 @@ using System.Text;
 using LeaveManagementCourse.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using LeaveManagementCourse.VievModel;
 
 namespace LeaveManagementCourse.Data
 {
@@ -17,5 +18,6 @@ namespace LeaveManagementCourse.Data
         public DbSet<LeaveTypes> LeaveTypes { get; set; }
         public DbSet<LeaveAllocations> LeaveAllocations { get; set; }
         public DbSet<LeaveHistories> LeaveHistories { get; set; }
+        public DbSet<LeaveManagementCourse.VievModel.LeaveTypesVM> DetailsLeaveTypesVM { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace LeaveManagementCourse.VievModel
         public DateTime DateCreated { get; set; }
         public EmployeesVM Employee { get; set; }
         public string EmployeeId { get; set; }
-        public DetailsLeaveTypesVM LeaveType { get; set; }
+        public LeaveTypesVM LeaveType { get; set; }
         public int LeaveTypeId { get; set; }
         public IEnumerable<SelectListItem> Employees { get; set; }
         public IEnumerable<SelectListItem> LeaveTypes { get; set; }

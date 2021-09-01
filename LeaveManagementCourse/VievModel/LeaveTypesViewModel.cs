@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace LeaveManagementCourse.VievModel
 {
-    public class DetailsLeaveTypesVM
+    public class LeaveTypesVM
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public DateTime DateCreated { get; set; }
-    }
-
-    public class CreateLeaveTypesVM
-    {
         [Required]
         public string Name { get; set; }
+        [Display(Name = "Date created")]
+        public DateTime? DateCreated { get; set; } // "?" means that the value is nullable
     }
 }

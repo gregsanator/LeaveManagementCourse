@@ -10,6 +10,7 @@ namespace LeaveManagementCourse.Contracts
         ICollection<T> FindAll(); // ICollection is a generic collection (it is like array i can accept an array of any objects)
         T FindById(int id);
         bool Create(T entity);
+        bool isExist(int id);
         bool Update(T entity);
         bool Delete(T entity);
         bool Save();

@@ -20,7 +20,11 @@ namespace LeaveManagementCourse.Repository
             _db.LeaveAllocations.Add(entity);
             return Save();
         }
-
+        public bool isExist(int id)
+        {
+            var exists = _db.LeaveTypes.Any(q => q.Id == id);
+            return exists;
+        }
         public bool Delete(LeaveAllocations entity)
         {
             _db.LeaveAllocations.Remove(entity);

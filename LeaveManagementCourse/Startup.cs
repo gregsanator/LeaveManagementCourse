@@ -33,11 +33,14 @@ namespace LeaveManagementCourse
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
             //Adding references for contracts and repositories
             services.AddScoped<ILeaveTypeRepository, LeaveTypesRepository>();
             services.AddScoped<ILeaveAllocationsRepository, LeaveAllocationsRepository>();
             services.AddScoped<ILeaveHistoriesRepository, LeaveHistoriesRepository>();
+
             services.AddAutoMapper(typeof(Maps)); // adding AutoMapper service
+
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();

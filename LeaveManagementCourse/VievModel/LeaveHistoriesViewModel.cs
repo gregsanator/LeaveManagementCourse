@@ -18,7 +18,7 @@ namespace LeaveManagementCourse.VievModel
         [Required]
         public DateTime EndDate { get; set; }
 
-        public DetailsLeaveTypesVM LeaveType { get; set; }
+        public LeaveTypesVM LeaveType { get; set; }
         public int LeaveTypeId { get; set; }
         public IEnumerable<SelectListItem> LeaveTypes { get; set; }
         public DateTime DateRequested { get; set; }

@@ -38,6 +38,12 @@ namespace LeaveManagementCourse.Repository
             return _db.LeaveHistories.Find(id);
         }
 
+        public bool isExist(int id)
+        {
+            var exists = _db.LeaveTypes.Any(q => q.Id == id);
+            return exists;
+        }
+
         public bool Save()
         {
             var numberOfChanges = _db.SaveChanges();
