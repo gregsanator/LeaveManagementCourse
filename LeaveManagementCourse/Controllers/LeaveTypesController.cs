@@ -3,6 +3,7 @@ using LeaveManagementCourse.Contracts;
 using LeaveManagementCourse.Data;
 using LeaveManagementCourse.Models;
 using LeaveManagementCourse.VievModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace LeaveManagementCourse.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class LeaveTypesController : Controller
     {
         private ILeaveTypeRepository _repo;
@@ -22,7 +24,6 @@ namespace LeaveManagementCourse.Controllers
             _repo = repo;
             _mapper = mapper;
         }
-
         // GET: LeaveTypesController
         public ActionResult Index()
         {
